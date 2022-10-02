@@ -12,9 +12,12 @@ namespace LinkedList
         {
             Console.WriteLine("Welcome to DataStructure Linkedlist!");
             linkedlist list = new linkedlist();
-            list.Add(30);
-            list.Add(56);
-            list.Add(70);
+            //list.Add(56);
+            //list.Add(30);
+            //list.Add(70);
+            list.AddFirst(70);
+            list.AddFirst(30);
+            list.AddFirst(56);
             Console.Write("\nLinked List:\n");
             list.Display();
             Console.ReadLine(); 
