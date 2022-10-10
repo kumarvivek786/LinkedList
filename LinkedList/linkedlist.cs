@@ -100,6 +100,30 @@ namespace LinkedList
             }
             return head;
         }
+        internal Node Search(int value)
+        {
+            Node temp = head;
+            while (temp != null)
+            {
+                if (temp.data == value)
+                {
+                    return temp;
+                }
+                temp = temp.next;
+            }
+            return null;
+        }
+        internal void RemoveElement(int data)
+        {
+            Node temp = this.head;
+            Node searchedNode = Search(data);
+            while (temp.next != searchedNode)
+            {
+                temp = temp.next;
+            }
+            temp.next = searchedNode.next;
+
+        }
     }
 }
 

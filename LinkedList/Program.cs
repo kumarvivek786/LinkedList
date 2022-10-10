@@ -22,15 +22,17 @@ namespace LinkedList
             //list.AddFirst(56);
             list.Append(56);
             list.Append(30);
+            list.Append(40);
             list.Append(70);
             Console.Write("\nLinked List:\n");
             list.Display();
             //list.InsertAtParticularPosition(56, node);
             //Console.Write("After Inserted 30 in between 56 and 70 :\nLinked List :\n");
             //list.Display();
-            list.InsertAtParticularPosition(30, node);
-            Console.Write("\n After Inserted 40 in b/w 30 and 70 :\n Linked List :\n");
-            list.Display(); 
+            list.RemoveElement(40);
+
+            Console.Write("\nAfter Remove\nLinked List :\n");
+            list.Display();
             Console.ReadLine();
 
         }
