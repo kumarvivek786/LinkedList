@@ -13,7 +13,7 @@ namespace LinkedList
         {
             Console.WriteLine("Welcome to DataStructure Linkedlist!");
             linkedlist list = new linkedlist();
-            Node node = new Node(30);
+            Node node = new Node(40);
             //list.Add(56);
             //list.Add(30);
             //list.Add(70);
@@ -28,9 +28,9 @@ namespace LinkedList
             //list.InsertAtParticularPosition(56, node);
             //Console.Write("After Inserted 30 in between 56 and 70 :\nLinked List :\n");
             //list.Display();
-            Console.WriteLine("enter the data which you want to search in Linked List ");
-            int data = int.Parse(Console.ReadLine());
-            Console.WriteLine(list.Search(data));
+            list.InsertAtParticularPosition(30, node);
+            Console.Write("\n After Inserted 40 in b/w 30 and 70 :\n Linked List :\n");
+            list.Display(); 
             Console.ReadLine();
 
         }
