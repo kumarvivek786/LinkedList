@@ -84,19 +84,17 @@ namespace LinkedList
 
         }
 
-        public Node RemoveLastNode()
+        internal string Search(int value)
         {
-            if (head == null)
-                return null;
-            if (head.next == null)
-                return null;
-            Node newNode = head;
-            while (newNode.next.next != null)
+            while (this.head != null)
             {
-                newNode = newNode.next;
+                if (this.head.data == value)
+                {
+                    return $"the given data {value} is Presrent in Linked List";
+                }
+                this.head = this.head.next;
             }
-            newNode.next = null;
-            return head;
+            return $"the given data {value} is Not Presrent in Linked List";
         }
     }
 }

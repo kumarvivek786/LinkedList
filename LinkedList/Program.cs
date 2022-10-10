@@ -28,9 +28,9 @@ namespace LinkedList
             //list.InsertAtParticularPosition(56, node);
             //Console.Write("After Inserted 30 in between 56 and 70 :\nLinked List :\n");
             //list.Display();
-            Console.Write("\n After Remove Last Node :\n Linked List :\n");
-            list.RemoveLastNode();
-            list.Display();
+            Console.WriteLine("enter the data which you want to search in Linked List ");
+            int data = int.Parse(Console.ReadLine());
+            Console.WriteLine(list.Search(data));
             Console.ReadLine();
 
         }
