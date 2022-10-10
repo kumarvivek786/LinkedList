@@ -10,7 +10,7 @@ namespace LinkedList
 {
     internal class linkedlist
     {
-            public Node head;
+        public Node head;
 
         public void Add(int data)
         {
@@ -24,7 +24,7 @@ namespace LinkedList
                     temp = temp.next;
                 temp.next = node;
             }
-            Console.WriteLine("{0} inserted into the linked list",data);
+            Console.WriteLine("{0} inserted into the linked list", data);
         }
 
         public void AddFirst(int data)
@@ -42,7 +42,7 @@ namespace LinkedList
             Add(data);
         }
 
-        public Node InsertAtPosition(int position ,int data)
+        public Node InsertAtPosition(int position, int data)
         {
             if (position < 1)
                 Console.WriteLine("invalid Position");
@@ -61,12 +61,13 @@ namespace LinkedList
                         newnode.next = head;
                         head = newnode;
                     }
-            }if (position != 0)
-             Console.WriteLine("out of range");
-            Console.WriteLine("inserted node" +head);
+            }
+            if (position != 0)
+                Console.WriteLine("out of range");
+            Console.WriteLine("inserted node" + head);
             return head;
         }
-        
+
         public void Display()
         {
             Node temp = this.head;
@@ -82,30 +83,20 @@ namespace LinkedList
             }
 
         }
-        internal Node InsertAtParticularPosition(int PreviousData, Node Newdata)
-        {
-            Node temp = this.head;
-            while (temp != null)
-            {
-                while (temp.data == PreviousData)
-                {
-                    Node newnode = temp.next;
-                    temp.next = Newdata;
-                    temp.next.next = newnode;
 
-                    break;
-                }
-                temp = temp.next;
-            }
-            return head;
-
-        }
-        public Node RemoveFirstNode()
+        public Node RemoveLastNode()
         {
-            if (this.head == null)
+            if (head == null)
                 return null;
-            this.head = this.head.next;
-            return this.head;
+            if (head.next == null)
+                return null;
+            Node newNode = head;
+            while (newNode.next.next != null)
+            {
+                newNode = newNode.next;
+            }
+            newNode.next = null;
+            return head;
         }
     }
 }

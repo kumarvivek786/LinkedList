@@ -28,8 +28,8 @@ namespace LinkedList
             //list.InsertAtParticularPosition(56, node);
             //Console.Write("After Inserted 30 in between 56 and 70 :\nLinked List :\n");
             //list.Display();
-            Console.Write("\n After Remove First Node :\n Linked List :\n");
-            list.RemoveFirstNode();
+            Console.Write("\n After Remove Last Node :\n Linked List :\n");
+            list.RemoveLastNode();
             list.Display();
             Console.ReadLine();
 
