@@ -25,7 +25,7 @@ namespace LinkedList
             list.Append(70);
             Console.Write("\nLinked List:\n");
             list.Display();
-            //list.InsertAtParticularPosition(56, node);
+            //list.InsertAtPosition(3,30);
             //Console.Write("After Inserted 30 in between 56 and 70 :\nLinked List :\n");
             //list.Display();
             Console.WriteLine("enter the data which you want to search in Linked List ");
