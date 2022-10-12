@@ -7,7 +7,7 @@ using System.Xml.Linq;
 
 namespace LinkedList
 {
-    internal class Node
+    public class Node
     {
         
         public int data;
