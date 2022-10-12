@@ -25,7 +25,7 @@ namespace LinkedList
             list.Append(70);
             Console.Write("\nLinked List:\n");
             list.Display();
-            //list.InsertAtParticularPosition(56, node);
+            //list.InsertAtPosition(2, 30);
             //Console.Write("After Inserted 30 in between 56 and 70 :\nLinked List :\n");
             //list.Display();
             Console.Write("\n After Remove Last Node :\n Linked List :\n");
