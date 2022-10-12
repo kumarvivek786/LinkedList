@@ -13,7 +13,6 @@ namespace LinkedList
         {
             Console.WriteLine("Welcome to DataStructure Linkedlist!");
             linkedlist list = new linkedlist();
-            Node node = new Node(30);
             //list.Add(56);
             //list.Add(30);
             //list.Add(70);
