@@ -45,25 +45,30 @@ namespace LinkedList
         public Node InsertAtPosition(int position ,int data)
         {
             if (position < 1)
-                Console.WriteLine("invalid Position");
+                Console.WriteLine("Invalid Position");
             if (position == 1)
             {
-                Node newnode = new Node(data);
-                newnode.next = head;
-                head = newnode;
+                var newNode = new Node(data);
+                newNode.next = head;
+                head = newNode;
             }
             else
             {
-                while (position != 0)
+                while (position-- != 0)
+                {
                     if (position == 1)
                     {
-                        Node newnode = new Node(data);
-                        newnode.next = head;
-                        head = newnode;
+                        Node node = new Node(data);
+                        node.next = this.head.next;
+                        head.next = node;
+                        break;
                     }
-            }if (position != 0)
-             Console.WriteLine("out of range");
-            Console.WriteLine("inserted node" +head);
+                }
+                if (position != 1)
+                {
+                    Console.WriteLine("Position out of range");
+                }
+            }
             return head;
         }
         
@@ -82,24 +87,7 @@ namespace LinkedList
             }
 
         }
-        internal Node InsertAtParticularPosition(int PreviousData, Node Newdata)
-        {
-            Node temp = this.head;
-            while (temp != null)
-            {
-                while (temp.data == PreviousData)
-                {
-                    Node newnode = temp.next;
-                    temp.next = Newdata;
-                    temp.next.next = newnode;
-
-                    break;
-                }
-                temp = temp.next;
-            }
-            return head;
-
-        }
+        
         public Node RemoveFirstNode()
         {
             if (this.head == null)
